@@ -1,0 +1,25 @@
+{% block conteudo %}
+<h3 class="h3">Mapa de Teste</h3>
+<div id="meuMapa" style="width: 600px; height: 300px; "></div>
+
+{% endblock %}
+
+
+{% block js_script %}
+<script>
+    var map = L.map('meuMapa').setView([-15, -47], 8);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">'
+    }).addTo(map);
+
+    var marker = L.marker([-15.775714, -47.899629]).addTo(map);
+
+    var polygon = L.polygon([
+        [-15.769881, -47.893342],
+        [-15.769891, -47.892044],
+        [-15.764088, -47.8939320],
+        [51.51, -0.047]
+    ]).addTo(map);
+</script>
+{% endblock %H
