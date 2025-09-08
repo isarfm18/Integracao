@@ -42,3 +42,23 @@ O objetivo é fornecer uma central de serviços que exibe informações em **com
 
 ## 📂 Estrutura do Projeto
 
+Integracao-master/
+│── main.py # Arquivo principal Flask (rotas)
+│── models/ # Camada de modelos e integração com o banco
+│ ├── db.py # Classe de conexão com MySQL
+│ ├── model.py # Classe base para manipulação genérica de tabelas
+│ ├── servico.py # Modelo de Serviços
+│ ├── setor.py # Modelo de Setores
+│ ├── local.py # Modelo de Locais
+│ └── popular_*.py # Scripts para popular tabelas
+│── opcoes/ # Componentes da aplicação
+│ ├── cards.py # Geração de cards de serviços
+│ ├── tabelas.py # Geração de tabelas de serviços
+│ ├── combos.py # Geração de combos dinâmicos
+│ └── mapa.py # Representação gráfica em mapa
+│── integração/ # Arquivos auxiliares (modelos, imagens)
+│ ├── CentralServicos.mwb # Modelo do banco (MySQL Workbench)
+│ └── logo.jpg, loading.gif # Assets
+│── templates/ # Páginas HTML (Flask + Jinja2)
+│── static/ # Recursos estáticos (CSS, JS, imagens)
+
